@@ -1,6 +1,6 @@
 # Microsoft's official Go MSSQL driver
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/microsoft/go-mssqldb.svg)](https://pkg.go.dev/github.com/microsoft/go-mssqldb)
+[![Go Reference](https://pkg.go.dev/badge/github.com/io1o/go-mssqldb.svg)](https://pkg.go.dev/github.com/io1o/go-mssqldb)
 [![Build status](https://ci.appveyor.com/api/projects/status/jrln8cs62wj9i0a2?svg=true)](https://ci.appveyor.com/project/microsoft/go-mssqldb)
 [![codecov](https://codecov.io/gh/microsoft/go-mssqldb/branch/master/graph/badge.svg)](https://codecov.io/gh/microsoft/go-mssqldb)
 
@@ -9,7 +9,7 @@
 
 Requires Go 1.17 or above.
 
-Install with `go install github.com/microsoft/go-mssqldb@latest`.
+Install with `go install github.com/io1o/go-mssqldb@latest`.
 
 ## Connection Parameters and DSN
 
@@ -99,8 +99,8 @@ package main
 
 import (
     ...
-    _ "github.com/microsoft/go-mssqldb"
-    _ "github.com/microsoft/go-mssqldb/integratedauth/krb5"
+    _ "github.com/io1o/go-mssqldb"
+    _ "github.com/io1o/go-mssqldb/integratedauth/krb5"
 )
 
 func main() {
@@ -241,7 +241,7 @@ import (
   "net/url"
 
   // Import the Azure AD driver module (also imports the regular driver package)
-  "github.com/microsoft/go-mssqldb/azuread"
+  "github.com/io1o/go-mssqldb/azuread"
 )
 
 func ConnectWithMSI() (*sql.DB, error) {
@@ -408,7 +408,7 @@ Include the local certificate providers:
 
 ```go
  import (
-  "github.com/microsoft/go-mssqldb/aecmk/localcert"
+  "github.com/io1o/go-mssqldb/aecmk/localcert"
  )
  ```
 
@@ -428,8 +428,8 @@ If the correct key provider is included in your application, decryption of encry
 Encryption of parameters passed to `Exec` and `Query` variants requires an extra round trip per query to fetch the encryption metadata. If the error returned by a query attempt indicates a type mismatch between the parameter and the destination table, most likely your input type is not a strict match for the SQL Server data type of the destination. You may be using a Go `string` when you need to use one of the driver-specific aliases like `VarChar` or `NVarCharMax`.
 
 *** NOTE *** - Currently `char` and `varchar` types do not include a collation parameter component so can't be used for inserting encrypted values. Also, using a nullable sql package type like `sql.NullableInt32` to pass a `NULL` value for an encrypted column will not work unless the encrypted column type is `nvarchar`. 
-https://github.com/microsoft/go-mssqldb/issues/129
-https://github.com/microsoft/go-mssqldb/issues/130
+https://github.com/io1o/go-mssqldb/issues/129
+https://github.com/io1o/go-mssqldb/issues/130
 
 
 ### Local certificate AE key provider
@@ -444,7 +444,7 @@ Both providers can be constrained to an allowed list of encryption key paths by 
 
 ### Azure Key Vault (AZURE_KEY_VAULT) key provider
 
-Import this provider using `github.com/microsoft/go-mssqldb/aecmk/akv`
+Import this provider using `github.com/io1o/go-mssqldb/aecmk/akv`
 
 Constrain the provider to an allowed list of key vaults by appending vault host strings like "mykeyvault.vault.azure.net" to `akv.KeyProvider.AllowedLocations`.
 
@@ -457,9 +457,9 @@ Constrain the provider to an allowed list of key vaults by appending vault host 
  or add a `select ID = convert(bigint, SCOPE_IDENTITY());` to the end of your
  query (ref [SCOPE_IDENTITY](https://docs.microsoft.com/en-us/sql/t-sql/functions/scope-identity-transact-sql)).
  This will ensure you are getting the correct ID and will prevent a network round trip.
-* [NewConnector](https://godoc.org/github.com/microsoft/go-mssqldb#NewConnector)
+* [NewConnector](https://godoc.org/github.com/io1o/go-mssqldb#NewConnector)
     may be used with [OpenDB](https://golang.org/pkg/database/sql/#OpenDB).
-* [Connector.SessionInitSQL](https://godoc.org/github.com/microsoft/go-mssqldb#Connector.SessionInitSQL)
+* [Connector.SessionInitSQL](https://godoc.org/github.com/io1o/go-mssqldb#Connector.SessionInitSQL)
  may be set to set any driver specific session settings after the session
  has been reset. If empty the session will still be reset but use the database
  defaults in Go1.10+.
@@ -524,12 +524,12 @@ To fix SQL Server 2008 R2 issue, install SQL Server 2008 R2 Service Pack 2.
 To fix SQL Server 2008 issue, install Microsoft SQL Server 2008 Service Pack 3 and Cumulative update package 3 for SQL Server 2008 SP3.
 More information: <http://support.microsoft.com/kb/2653857>
 
-* Bulk copy does not yet support encrypting column values using Always Encrypted. Tracked in [#127](https://github.com/microsoft/go-mssqldb/issues/127)
+* Bulk copy does not yet support encrypting column values using Always Encrypted. Tracked in [#127](https://github.com/io1o/go-mssqldb/issues/127)
 
 # Contributing
 This project is a fork of [https://github.com/denisenkom/go-mssqldb](https://github.com/denisenkom/go-mssqldb) and welcomes new and previous contributors. For more informaton on contributing to this project, please see [Contributing](./CONTRIBUTING.md).
 
-For more information on the roadmap for go-mssqldb, [project plans](https://github.com/microsoft/go-mssqldb/projects) are available for viewing and discussion.
+For more information on the roadmap for go-mssqldb, [project plans](https://github.com/io1o/go-mssqldb/projects) are available for viewing and discussion.
 
 
 # Microsoft Open Source Code of Conduct

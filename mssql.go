@@ -17,9 +17,9 @@ import (
 	"unicode"
 
 	"github.com/golang-sql/sqlexp"
-	"github.com/microsoft/go-mssqldb/aecmk"
-	"github.com/microsoft/go-mssqldb/internal/querytext"
-	"github.com/microsoft/go-mssqldb/msdsn"
+	"github.com/io1o/go-mssqldb/aecmk"
+	"github.com/io1o/go-mssqldb/internal/querytext"
+	"github.com/io1o/go-mssqldb/msdsn"
 )
 
 // ReturnStatus may be used to return the return value from a proc.
@@ -136,7 +136,6 @@ func NewConnectorProcess(dsn string) (*Connector, error) {
 
 	return c, nil
 }
-
 
 // NewConnectorWithAccessTokenProvider creates a new connector from a DSN using the given
 // access token provider. The returned connector may be used with sql.OpenDB.

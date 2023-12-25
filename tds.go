@@ -15,9 +15,9 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"github.com/microsoft/go-mssqldb/aecmk"
-	"github.com/microsoft/go-mssqldb/integratedauth"
-	"github.com/microsoft/go-mssqldb/msdsn"
+	"github.com/io1o/go-mssqldb/aecmk"
+	"github.com/io1o/go-mssqldb/integratedauth"
+	"github.com/io1o/go-mssqldb/msdsn"
 )
 
 func parseDAC(msg []byte, instance string) msdsn.BrowserData {
@@ -1248,7 +1248,7 @@ initiate_connection:
 				if !config.DynamicRecordSizingDisabled {
 					config = config.Clone()
 
-					// fix for https://github.com/microsoft/go-mssqldb/issues/166
+					// fix for https://github.com/io1o/go-mssqldb/issues/166
 					// Go implementation of TLS payload size heuristic algorithm splits single TDS package to multiple TCP segments,
 					// while SQL Server seems to expect one TCP segment per encrypted TDS package.
 					// Setting DynamicRecordSizingDisabled to true disables that algorithm and uses 16384 bytes per TLS package

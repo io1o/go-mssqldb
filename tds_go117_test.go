@@ -11,7 +11,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/microsoft/go-mssqldb/msdsn"
+	"github.com/io1o/go-mssqldb/msdsn"
 	"github.com/stretchr/testify/assert"
 )
 

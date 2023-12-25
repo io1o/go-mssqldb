@@ -1,11 +1,11 @@
-module github.com/microsoft/go-mssqldb/examples/aws-rds-proxy-iam-auth
+module github.com/io1o/go-mssqldb/examples/aws-rds-proxy-iam-auth
 
 go 1.19
 
 require (
 	github.com/aws/aws-sdk-go-v2/config v1.18.11
 	github.com/aws/aws-sdk-go-v2/feature/rds/auth v1.2.5
-	github.com/microsoft/go-mssqldb v0.20.0
+	github.com/io1o/go-mssqldb v0.20.0
 )
 
 require (

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/microsoft/go-mssqldb/aecmk"
-	"github.com/microsoft/go-mssqldb/internal/certs"
+	"github.com/io1o/go-mssqldb/aecmk"
+	"github.com/io1o/go-mssqldb/internal/certs"
 	"golang.org/x/sys/windows"
 )
 

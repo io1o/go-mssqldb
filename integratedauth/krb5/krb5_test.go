@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/io1o/go-mssqldb/msdsn"
 	"github.com/jcmturner/gokrb5/v8/config"
-	"github.com/microsoft/go-mssqldb/msdsn"
 )
 
 func TestReadKrb5ConfigHappyPath(t *testing.T) {

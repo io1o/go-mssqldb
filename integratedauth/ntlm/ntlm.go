@@ -12,8 +12,8 @@ import (
 	"time"
 	"unicode/utf16"
 
-	"github.com/microsoft/go-mssqldb/integratedauth"
-	"github.com/microsoft/go-mssqldb/msdsn"
+	"github.com/io1o/go-mssqldb/integratedauth"
+	"github.com/io1o/go-mssqldb/msdsn"
 
 	//lint:ignore SA1019 MD4 is used by legacy NTLM
 	"golang.org/x/crypto/md4"

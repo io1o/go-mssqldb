@@ -11,11 +11,11 @@ import (
 	"strconv"
 
 	"github.com/golang-sql/sqlexp"
-	"github.com/microsoft/go-mssqldb/aecmk"
-	"github.com/microsoft/go-mssqldb/internal/github.com/swisscom/mssql-always-encrypted/pkg/algorithms"
-	"github.com/microsoft/go-mssqldb/internal/github.com/swisscom/mssql-always-encrypted/pkg/encryption"
-	"github.com/microsoft/go-mssqldb/internal/github.com/swisscom/mssql-always-encrypted/pkg/keys"
-	"github.com/microsoft/go-mssqldb/msdsn"
+	"github.com/io1o/go-mssqldb/aecmk"
+	"github.com/io1o/go-mssqldb/internal/github.com/swisscom/mssql-always-encrypted/pkg/algorithms"
+	"github.com/io1o/go-mssqldb/internal/github.com/swisscom/mssql-always-encrypted/pkg/encryption"
+	"github.com/io1o/go-mssqldb/internal/github.com/swisscom/mssql-always-encrypted/pkg/keys"
+	"github.com/io1o/go-mssqldb/msdsn"
 	"golang.org/x/text/encoding/unicode"
 )
 

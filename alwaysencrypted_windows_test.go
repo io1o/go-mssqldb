@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/microsoft/go-mssqldb/aecmk"
-	"github.com/microsoft/go-mssqldb/aecmk/localcert"
-	"github.com/microsoft/go-mssqldb/internal/certs"
+	"github.com/io1o/go-mssqldb/aecmk"
+	"github.com/io1o/go-mssqldb/aecmk/localcert"
+	"github.com/io1o/go-mssqldb/internal/certs"
 	"github.com/stretchr/testify/assert"
 )
 

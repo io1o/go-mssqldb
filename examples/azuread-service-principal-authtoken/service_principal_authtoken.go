@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"log"
 
-	_ "github.com/microsoft/go-mssqldb"
-	"github.com/microsoft/go-mssqldb/azuread"
+	_ "github.com/io1o/go-mssqldb"
+	"github.com/io1o/go-mssqldb/azuread"
 )
 
 var (
