@@ -125,6 +125,19 @@ func NewConnector(dsn string) (*Connector, error) {
 	return c, nil
 }
 
+// NewConnector creates a new connector from a DSN.
+// The returned connector may be used with sql.OpenDB.
+func NewConnectorProcess(dsn string) (*Connector, error) {
+	params, err := msdsn.Parse(dsn)
+	if err != nil {
+		return nil, err
+	}
+	c := newConnector(params, driverInstance)
+
+	return c, nil
+}
+
+
 // NewConnectorWithAccessTokenProvider creates a new connector from a DSN using the given
 // access token provider. The returned connector may be used with sql.OpenDB.
 func NewConnectorWithAccessTokenProvider(dsn string, tokenProvider func(ctx context.Context) (string, error)) (*Connector, error) {
