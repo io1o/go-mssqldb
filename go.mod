@@ -34,3 +34,5 @@ require (
 	golang.org/x/net v0.14.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/microsoft/go-mssqldb => github.com/io1o/go-mssqldb
