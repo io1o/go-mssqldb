@@ -1,4 +1,4 @@
-module github.com/microsoft/go-mssqldb
+module github.com/io1o/go-mssqldb
 
 go 1.17
 
